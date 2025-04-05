@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dosya Asistanı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="firewall">
+    <h2>Giriş Yap</h2>
+    <input type="password" id="passwordInput" placeholder="Şifre girin">
+    <button onclick="checkPassword()">Giriş</button>
+    <p id="loginMessage"></p>
+  </div>
+
+  <div id="app" style="display: none;">
+    <h1>Depolama Alanı</h1>
+    <button onclick="document.getElementById('fileInput').click()">Dosya Yükle</button>
+    <input type="file" id="fileInput" multiple style="display: none;">
+    
+    <div>
+      <h3>Geçmiş Dosyalar</h3>
+      <div id="fileList"></div>
+    </div>
+
+    <div>
+      <h3>Dosya Asistanı</h3>
+      <input type="text" id="assistantInput" placeholder="Dosya adı yaz...">
+      <button onclick="talkToAssistant()">Sor</button>
+      <p id="assistantResponse"></p>
+    </div>
+
+    <div>
+      <h3>🎬 Film Yapıcı</h3>
+      <input type="text" id="filmInput" placeholder="Film konusunu yaz...">
+      <button onclick="generateFilm()">Film Oluştur</button>
+      <div id="filmOutput"></div>
+    </div>
+
+    <div>
+      <h3>🧠 IP Bilgisi</h3>
+      <p id="ipAddress">IP Adresiniz: ...</p>
+    </div>
+
+    <div id="devtools" style="display: none;">
+      <h3>🛠️ DEVTOOLS PANEL</h3>
+      <p>Kayıtlı IP adresleri:</p>
+      <ul id="ipList"></ul>
+    </div>
+
+    <input type="text" id="devtoolsInput" placeholder="/devtools yaz...">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
