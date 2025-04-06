@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Dosya Asistanı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen">
+    <h2>🔐 Giriş</h2>
+    <input type="password" id="password" placeholder="Şifre">
+    <button onclick="login()">Giriş Yap</button>
+  </div>
+
+  <div id="app" style="display:none;">
+    <h1>📁 3D Dosya Asistanı</h1>
+    <p>IP Adresiniz: <span id="ip">Yükleniyor...</span></p>
+    <input type="file" id="fileInput" multiple>
+    <button onclick="handleFiles()">Dosyaları Yükle</button>
+
+    <h3>📜 Dosyalar</h3>
+    <ul id="fileList"></ul>
+
+    <h3>🤖 Asistan</h3>
+    <textarea id="commandInput" placeholder="Komut girin..."></textarea>
+    <button onclick="handleCommand()">Gönder</button>
+    <pre id="assistantOutput"></pre>
+
+    <div id="3d-viewer">
+      <!-- 3D içerik burada görüntülenecek -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
