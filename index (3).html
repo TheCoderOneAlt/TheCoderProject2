@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIS FOOTAGE DOES NOT EXIST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="static"></div>
+    <div class="noise"></div>
+    
+    <div class="owner-banner">
+        OPERATOR: <span id="ownerName">Loading...</span>
+    </div>
+
+    <div class="container">
+        <h1 class="glitch">THIS FOOTAGE DOES NOT EXIST</h1>
+        
+        <div class="search-container">
+            <input type="text" id="prompt" placeholder="Describe what you want to see..." autocomplete="off">
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>TIME OF DAY</label>
+                <select id="timeOfDay">
+                    <option value="early morning">Early Morning (4AM-6AM)</option>
+                    <option value="morning">Morning (6AM-11AM)</option>
+                    <option value="noon">Noon (11AM-2PM)</option>
+                    <option value="afternoon">Afternoon (2PM-5PM)</option>
+                    <option value="evening">Evening (5PM-8PM)</option>
+                    <option value="night">Night (8PM-4AM)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>FOOTAGE SOURCE</label>
+                <select id="footageType">
+                    <option value="security">Security Camera</option>
+                    <option value="dashcam">Dashcam Footage</option>
+                    <option value="bodycam">Body Camera</option>
+                    <option value="cellphone">Cellphone Recording</option>
+                    <option value="vhs">VHS Recording</option>
+                    <option value="drone">Drone Footage</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>ATMOSPHERIC CONDITIONS</label>
+                <select id="atmosphere">
+                    <option value="clear">Clear</option>
+                    <option value="foggy">Heavy Fog</option>
+                    <option value="rain">Rain</option>
+                    <option value="snow">Snow</option>
+                    <option value="dust">Dust Storm</option>
+                </select>
+            </div>
+        </div>
+
+        <button onclick="generate()">GENERATE FOOTAGE</button>
+
+        <div class="result" id="result">
+            <div class="video-container">
+                <div class="frame-container"></div>
+                <div class="video-overlay"></div>
+                <div class="artifacts"></div>
+                <div class="rec-indicator">
+                    <div class="rec-dot"></div>
+                    REC
+                </div>
+                <div class="timestamp" id="timestamp"></div>
+            </div>
+            <div class="description" id="description"></div>
+            <div class="metadata">
+                <span id="location">LOCATION: [REDACTED]</span>
+                <span id="caseNumber">CASE #: [REDACTED]</span>
+            </div>
+        </div>
+
+        <div class="warning">
+            WARNING: THIS IS AN AI GENERATION - ANY RESEMBLANCE TO REAL EVENTS IS PURELY COINCIDENTAL
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="effects.js"></script>
+    <script type="module" src="generator.js"></script>
+</body>
+</html>
